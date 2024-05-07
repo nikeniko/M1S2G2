@@ -145,7 +145,7 @@ if (Aldo >= Giovanni && Aldo >= Gigi) {
   }
 }
 
-console.log("ordine decrescente", Aldo, Giovanni, Gigi);
+console.log("ordine decrescente", primo, secondo, terzo);
 
 /* ESERCIZIO 8
  Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
