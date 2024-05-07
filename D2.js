@@ -66,30 +66,44 @@ checkIfEqualOrEquals(num6);
 */
 
 const shippingPrice = 10;
-let totalShoppingCart = 55;
-function checkIfDiscount(totalShoppingCart) {
-  if (totalShoppingCart > 50) {
-    return totalShoppingCart;
-  } else {
-    return totalShoppingCart + shippingPrice;
-  }
+let totalShoppingCart = 65;
+
+if (totalShoppingCart <= 50) {
+  console.log("totale", totalShoppingCart + shippingPrice);
+} else {
+  console.log("totale", totalShoppingCart);
 }
-console.log(checkIfDiscount(totalShoppingCart));
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
-function checkIfDiscount(totalShoppingCart) {
-  if (totalShoppingCart * 0.8 > 50) {
-    return totalShoppingCart * 0.8;
+const blackFriday = true;
+
+if (blackFriday === true) {
+  totalShoppingCart = totalShoppingCart - (totalShoppingCart / 100) * 20;
+  if (totalShoppingCart <= 50) {
+    totalShoppingCart = totalShoppingCart + 10;
+    console.log("sconto black fiday; - 20%");
+    console.log("spesa di spedizione: €10");
+    console.log("totale: €" + totalShoppingCart);
   } else {
-    return totalShoppingCart * 0.8 + shippingPrice;
+    console.log("sconto black fiday; - 20%");
+    console.log("spedizione gratuita");
+    console.log("totale: €" + totalShoppingCart);
+  }
+} else {
+  if (totalShoppingCart <= 50) {
+    totalShoppingCart = totalShoppingCart + 10;
+    console.log("spesa di spedizione: €10");
+    console.log("totale: €" + totalShoppingCart);
+  } else {
+    console.log("spedizione gratuita");
+    console.log("totale: €" + totalShoppingCart);
   }
 }
 
-console.log(checkIfDiscount(totalShoppingCart));
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
